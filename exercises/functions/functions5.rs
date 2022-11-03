@@ -1,13 +1,19 @@
+/*
+ * @Description: 
+ * @Author: zheng pengfei
+ * @Date: 2022-11-02 08:07:49
+ * @LastEditTime: 2022-11-02 08:22:34
+ * @LastEditors: zheng pengfei
+ */
 // functions5.rs
-// Execute `rustlings hint functions5` or use the `hint` watch subcommand for a hint.
+// Make me compile! Execute `rustlings hint functions5` for hints :)
 
-// I AM NOT DONE
 
 fn main() {
     let answer = square(3);
-    println!("The square of 3 is {}", answer);
+    println!("The answer is {}", answer);
 }
 
 fn square(num: i32) -> i32 {
-    num * num;
+    num * num
 }
