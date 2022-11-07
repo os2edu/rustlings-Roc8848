@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: zheng pengfei
+ * @Date: 2022-11-03 11:52:27
+ * @LastEditTime: 2022-11-07 21:34:31
+ * @LastEditors: zheng pengfei
+ */
 // modules3.rs
 // You can use the 'use' keyword to bring module paths from modules from anywhere
 // and especially from the Rust standard library into your scope.
@@ -5,10 +12,9 @@
 // from the std::time module. Bonus style points if you can do it with one line!
 // Execute `rustlings hint modules3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 // TODO: Complete this use statement
-use ???
+use std::time::{SystemTime, UNIX_EPOCH};
 
 fn main() {
     match SystemTime::now().duration_since(UNIX_EPOCH) {

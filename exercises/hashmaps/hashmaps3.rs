@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: zheng pengfei
+ * @Date: 2022-11-03 11:52:27
+ * @LastEditTime: 2022-11-07 22:04:32
+ * @LastEditors: zheng pengfei
+ */
 // hashmaps3.rs
 
 // A list of scores (one per line) of a soccer match is given. Each line
@@ -14,7 +21,7 @@
 
 // Execute `rustlings hint hashmaps3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// zpf
 
 use std::collections::HashMap;
 
@@ -40,6 +47,15 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
         // will be number of goals conceded from team_2, and similarly
         // goals scored by team_2 will be the number of goals conceded by
         // team_1.
+        let count1 = scores.entry(team_1_name.clone()).or_insert(Team{name:team_1_name,goals_scored:0,goals_conceded:0});
+        
+        count1.goals_scored +=team_1_score;
+        count1.goals_conceded +=team_2_score;
+        let count2 = scores.entry(team_2_name.clone()).or_insert(Team{name:team_2_name,goals_scored:0,goals_conceded:0});
+        count2.goals_scored +=team_2_score;
+        count2.goals_conceded +=team_1_score;
+        
+        
     }
     scores
 }

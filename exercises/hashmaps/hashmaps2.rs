@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: zheng pengfei
+ * @Date: 2022-11-03 11:52:27
+ * @LastEditTime: 2022-11-07 21:47:34
+ * @LastEditors: zheng pengfei
+ */
 // hashmaps2.rs
 
 // A basket of fruits in the form of a hash map is given. The key
@@ -11,7 +18,6 @@
 //
 // Execute `rustlings hint hashmaps2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 use std::collections::HashMap;
 
@@ -37,6 +43,7 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         // TODO: Put new fruits if not already present. Note that you
         // are not allowed to put any type of fruit that's already
         // present!
+        basket.entry(fruit).or_insert(50);
     }
 }
 
